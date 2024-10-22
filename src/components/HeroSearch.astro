@@ -1,6 +1,7 @@
 ---
 import SearchIcon from '@icons/Search.astro';
 import { getStudies } from '@lib/get-ij-studies';
+import SectionContainer from '@components/SectionContainer.astro';
 
 const SHORTCUTS = [
     {
@@ -23,51 +24,48 @@ const SHORTCUTS = [
 
 //const studies = await getStudies();
 ---
-
-<section class="mx-auto max-w-7xl px-4 w-full">
-    <div class="bg-hero-pattern mx-auto w-full rounded-3xl px-4 py-6">
-        <h1 class="text-black/80 font-medium tracking-wider text-2xl text-center pb-4">Tu carrera empieza aquí</h1>
-        <search class="bg-white rounded-3xl p-4">
-            <form>
-                <div>
-                    <select class="w-full py-4 border-b border-gray-300 text-gray-600">
-                        <option value="" disabled selected>Nivel de estudios</option>
-                        <option value="1">Bachillerato</option>
-                        <option value="2">Grado</option>
-                        <option value="3">Máster</option>
-                    </select>
-                </div>
-
-                <div>
-                    <input type="text" 
-                        placeholder="Estudios, puesto, empresa..."
-                        class="w-full py-4 border-b border-gray-300 text-gray-600">
-                </div>
-
-                <div class="mb-8">
-                    <input type="text" 
-                        placeholder="Provincia o población"
-                        class="w-full py-4 border-b text-gray-600">
-                </div>
-                <button class="rounded-4xl text-lg font-medium bg-accent text-white py-2 px-4 hover:saturate-150 transition inline-flex gap-x-2 justify-center items-center w-full">
-                    <SearchIcon />
-                    Buscar ofertas
-                </button>
-            </form>
-        </search>
-
-        <footer>
-            <h5 class="text-center pt-8 pb-4">Explora trabajos que se adapten a ti</h5>
-            <div class="flex flex-wrap gap-4 justify-around">
-                {
-                    SHORTCUTS.map(({label, href}) => (
-                        <a class="bg-white rounded-full p-4 text-primary"
-                        href={href}>
-                        {label}
-                    </a>
-                    ))
-                }
+<SectionContainer class="bg-hero-pattern rounded-3xl px-4 py-6">
+    <h1 class="text-black/80 font-medium tracking-wider text-2xl text-center pb-4">Tu carrera empieza aquí</h1>
+    <search class="bg-white rounded-3xl p-4">
+        <form>
+            <div>
+                <select class="w-full py-4 border-b border-gray-300 text-gray-600">
+                    <option value="" disabled selected>Nivel de estudios</option>
+                    <option value="1">Bachillerato</option>
+                    <option value="2">Grado</option>
+                    <option value="3">Máster</option>
+                </select>
             </div>
-        </footer>
-    </div>
-</section>
+
+            <div>
+                <input type="text" 
+                    placeholder="Estudios, puesto, empresa..."
+                    class="w-full py-4 border-b border-gray-300 text-gray-600">
+            </div>
+
+            <div class="mb-8">
+                <input type="text" 
+                    placeholder="Provincia o población"
+                    class="w-full py-4 border-b text-gray-600">
+            </div>
+            <button class="rounded-4xl text-lg font-medium bg-accent text-white py-2 px-4 hover:saturate-150 transition inline-flex gap-x-2 justify-center items-center w-full">
+                <SearchIcon />
+                Buscar ofertas
+            </button>
+        </form>
+    </search>
+
+    <footer>
+        <h5 class="text-center pt-8 pb-4">Explora trabajos que se adapten a ti</h5>
+        <div class="flex flex-wrap gap-4 justify-around">
+            {
+                SHORTCUTS.map(({label, href}) => (
+                    <a class="bg-white rounded-full p-4 text-primary"
+                    href={href}>
+                    {label}
+                </a>
+                ))
+            }
+        </div>
+    </footer>
+</SectionContainer>
