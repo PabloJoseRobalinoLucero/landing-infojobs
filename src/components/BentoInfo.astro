@@ -29,11 +29,9 @@ const ARTICLES = [
     <div class="grid grid-cols-1 gap-4">
         {
             ARTICLES.map(({ class:className, title, contentId}) => (
-                <article class="aspect-square w-full">
-                    <button class:list={["h-full p-4 rounded-2xl flex justify-start", className]}>
-                        <h4 class="font-medium text-3xl text-left text-pretty tracking-separated pr-3">{title}</h4>
-                    </button>
-                </article>
+                <button class:list={["aspect-square w-full h-full p-4 rounded-2xl flex justify-start transition hover:scale-105", className]}>
+                    <span class="font-medium text-3xl text-left text-pretty tracking-separated pr-3">{title}</span>
+                </button>
             ))
         }
     </div>
