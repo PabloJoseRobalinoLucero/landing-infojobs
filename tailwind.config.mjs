@@ -6,13 +6,19 @@ export default {
 			colors: {
 				primary: '#167DB7',
 				accent: '#FE5230',
-				dark: '',
+				'ij-red': '#FF421C',
+				'ij-yellow': '#EFA500',
+				'ij-green': '#00A550',
+				'ij-black': '#212121'
 			},
 			backgroundImage: {
 				'hero-pattern': 'url(/hero-pattern.webp)',
 			},
 			borderRadius: {
 				'4xl': '3rem',
+			},
+			letterSpacing: {
+				'separated': '0.35px',
 			}
 		},
 	},
