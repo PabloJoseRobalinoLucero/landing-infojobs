@@ -1,4 +1,4 @@
-const INFOJOBS_API_ENDPOINT = 'https://www.infojobs.net/api/1/'
+const INFOJOBS_API_ENDPOINT = 'https://api.infojobs.net/api/1/'
 
 const TOKEN = import.meta.env.API_INFOJOBS_TOKEN
 
